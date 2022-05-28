@@ -2,10 +2,12 @@
   import Router from "svelte-spa-router";
   import Home from "./Home.svelte";
   import Add from "./Add.svelte";
+  import Edit from "./Edit.svelte";
 
   const routes = {
     "/": Home,
     "/add": Add,
+    "/edit/:id": Edit,
     "*": Home,
   };
 </script>
