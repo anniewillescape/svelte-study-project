@@ -2,6 +2,8 @@
 
 Slevte を使って SPA の練習をしてみる
 
+<https://sbfl.net/blog/2020/02/03/svelte-frontend-2/>
+
 ## Get started
 
 Install the dependencies...

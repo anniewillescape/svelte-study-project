@@ -1,45 +1,25 @@
 <script>
-  import Pokemon from "./Pokemon.svelte";
+  import Router from "svelte-spa-router";
+  import Home from "./Home.svelte";
+  import Add from "./Add.svelte";
 
-  const pokemon = [
-    {
-      name: "フシギダネ",
-      type: "くさ",
-      hp: 45,
-      atk: 49,
-      def: 49,
-      sAtk: 65,
-      sDef: 65,
-      spd: 45,
-    },
-    {
-      name: "ヒトカゲ",
-      type: "ほのお",
-      hp: 39,
-      atk: 52,
-      def: 43,
-      sAtk: 60,
-      sDef: 50,
-      spd: 65,
-    },
-    {
-      name: "ゼニガメ",
-      type: "みず",
-      hp: 44,
-      atk: 48,
-      def: 65,
-      sAtk: 50,
-      sDef: 64,
-      spd: 43,
-    },
-  ];
+  const routes = {
+    "/": Home,
+    "/add": Add,
+    "*": Home,
+  };
 </script>
 
 <main>
-  {#each pokemon as p}
-    <Pokemon pokemon={p} />
-  {/each}
+  <Router {routes} />
 </main>
 
 <style>
+  main {
+    background-color: rgb(255, 251, 246);
+    padding: 2em;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
 </style>
